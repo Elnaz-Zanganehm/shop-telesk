@@ -1,0 +1,35 @@
+label.form-label {
+    font-size: 14px;
+}
+
+label.form-check-label {
+    padding-right: 30px;
+}
+
+input#exampleCheck1 {
+    float: none;
+}
+
+.modal-footer {
+    display: flex !important;
+    justify-content: space-around !important;
+    font-size: 16px;
+}
+
+button.btn.btn-success.btn-sm.btn-block.mt-5 {
+    background: linear-gradient(90deg,#cb92d2,#7039a0);
+    border: none !important;
+    padding: 10px !important;
+    width: 40%;
+    border-radius: 27px !important;
+    margin: auto;
+    margin-top: 27px !important;
+    margin-bottom: 27px !important;
+    box-shadow: 0 0 3px #999;
+    display: block !important;
+
+}
+
+button.btn-close.m-lg-0 {
+    margin: 0px;
+}
