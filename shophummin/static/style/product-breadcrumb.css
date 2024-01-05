@@ -1,0 +1,32 @@
+.custom-breadcrumb {
+    margin: 0;
+    background-color: white;
+    /* background-color: transparent !important; */
+}
+
+nav.navbar_address {
+    box-shadow: 1px 0px 5px 0px #6740e194;
+    border-radius: 10px;
+}
+
+.navbar_address {
+    background: #f3f2ee; 
+    /* background: white; */
+}
+
+.breadcrumb-item {
+    /* background: #f3f2ee; */
+    padding: 9px;
+}
+
+
+.breadcrumb_links_home span {
+    font-size: 15px;
+    color: #b7b7b7;
+    display: inline-block;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: right !important;
+    padding-left: 8px;
+}

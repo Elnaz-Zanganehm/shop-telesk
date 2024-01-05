@@ -5,14 +5,18 @@ from . import models
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'create_time',)
 
+
 class OrderAdmin(admin.ModelAdmin):
     list_display = ('id', 'customer', 'order_date',)
+
 
 class OrderItemAdmin(admin.ModelAdmin):
     list_display = ('id', 'order', 'product')
 
+
 class TransactionAdmin(admin.ModelAdmin):
     list_display = ('id', 'invoice', 'amount', 'transaction_date', 'status')
+
 
 class InvoiceAdmin(admin.ModelAdmin):
     list_display = ('id', 'order',)

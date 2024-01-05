@@ -1,0 +1,157 @@
+ /* all-page */
+/* @import url(../style/login-form-modal.css); */
+
+*{ 
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face{
+    font-family: Vazir-Medium;
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/Vazir-Medium.woff2') format('woff2'),
+    url('../fonts/Vazir-Medium.woff') format('woff'),
+    url('../fonts/Vazir-Medium.eot') format('eot');
+}
+
+html{
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+
+body{
+    max-width: 100vw;
+    /* overflow-x: hidden; */
+    direction: rtl;
+    font-family: Vazir-Medium !important;
+    /* padding: 0; */
+    padding-top: 80px !important;
+}
+
+/* header */
+#main-menu .navbar-nav .nav-link {
+    color: white;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+nav#main-menu {
+    height: 85px;
+    padding: 10px;
+}
+
+ul.navbar-nav {
+    padding: 8px;
+    margin-right: 2px !important;
+}
+
+#login-peson {
+    border-color: white;
+}
+
+#shopping-id {
+    border: 1px solid white;
+    border-radius: 13px;
+}
+
+#shopping-card {
+    border-color: cornsilk !important;
+}
+
+.dropdown-menu.show {
+    min-width: 189px;
+    border: none;
+    box-shadow: 0 0 5px #dac5da;
+    padding: 15px;
+}
+
+.d-flex.ml-2.my-1 {
+    padding: 0 5px 0px 10px;
+}
+
+.banner {
+    z-index: 1000 !important;
+}
+
+img.banner {
+    width: 100%;
+    height: 800px;
+}
+
+ul.navbar-nav {
+    margin-left: auto;
+}
+
+.d-flex.ai-center.js-end.mb-0 {
+    padding-left: 15px;
+}
+
+.styles_line{
+    border: 1px solid;
+    color: white;
+    
+}
+
+@media (min-width:768px){
+    #my-carousel{
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+.scroll,.scroll-m {
+    background: rgb(104 104 150);
+    box-shadow: 0 0 8px #888;
+}
+
+/* fotter */
+.footer__widget .location_icon{
+    float: right;
+}
+
+.footer ul li{
+    line-height: 32px;
+}
+
+.location_phon_email{
+    color: rgb(26 137 215);
+
+}
+
+.color_icon{
+   color: rgb(129, 125, 125);
+}
+
+#ertebat {
+    width: auto;
+}
+
+p#address {
+    padding-right: 21px;
+}
+
+.banner-t {
+    position: relative;
+}
+
+.banner-t img {
+    position: absolute;
+}
+
+
+i.bi.bi-youtube {
+    vertical-align: -webkit-baseline-middle;
+}
+
+.pos-relative #basket-icon{
+    font-size: 20px;
+    border-radius: 8px;
+    height: 41px;
+    width: 35px;
+    padding: 5px 6px;
+}

@@ -2,7 +2,8 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
 
-class Product( models.Model ) :
+
+class Product(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     create_time = models.DateTimeField(auto_now_add=True)
@@ -17,7 +18,13 @@ class Product( models.Model ) :
         return self.name
 
     def get_absolute_url(self):
-        return reverse('shophummin:product-details', args=[self.id])
+        return reverse('shophummin:product', args=[self.id])
+
+    def image_url(self):
+        if self.image:
+            return self.image.url
+        return None
+
 
 class Order(models.Model):
     customer = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -25,6 +32,24 @@ class Order(models.Model):
 
     def __str__(self):
         return str(self.id)
+
+
+class Products_detail(models.Model):
+    product = models.ForeignKey(Product, null=True, on_delete=models.SET_NULL)
+    product_image2 = models.ImageField(upload_to='images/product/%Y/%m/%d', blank=True)
+    product_image3 = models.ImageField(upload_to='images/product/%Y/%m/%d', blank=True)
+    # برای قسمت معرفی
+    description = models.TextField()
+    # برای قسمت دیدگاه
+    comments = models.TextField()
+    # برای قسمت مشخصات
+    specification = models.TextField()
+    # برای قسمت نحوه استفاده
+    instructions = models.TextField()
+    # برند
+    brand = models.TextField()
+    # ویژگی های محصول
+    attributes = models.TextField()
 
 
 class OrderItem(models.Model):

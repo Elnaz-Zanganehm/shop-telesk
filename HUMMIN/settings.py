@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-++-vcvt1*x1hd92t=d7e4ulzgf!bv0qrbitg+(=d0fk&toa!y!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['telesk.org', 'www.telesk.org', '127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shophummin',
+    'sabad',
 ]
 
 MIDDLEWARE = [
@@ -63,6 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'sabad.context_processor.sabad'
             ],
         },
     },
@@ -125,7 +127,16 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+SABAD_SESSION_ID ='sabad'
+
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/login/'
+
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+

@@ -36,7 +36,7 @@
               <a class="nav-link active text-white" aria-current="page" href="#">صفحه اصلی</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="/store.html">فروشگاه</a>
+              <a class="nav-link text-white" href="{% url 'shophummin:store' %}">فروشگاه</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled text-white" aria-disabled="true">درباره ما</a>
@@ -47,27 +47,23 @@
           </ul>
 
           <div class="d-flex ai-center js-end">
-            <a href="" class="btn text-white" data-bs-toggle="modal" data-bs-target="#login-form" id="login-peson">
-              <div class="d-flex ai-center js-center relative grow-1">
-                <div class="d-flex ml-2 my-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
-                    <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
-                  </svg>
-                </div>
-                ورود | ثبت نام
-              </div>
-            </a>
+            {% include 'login.html' %}
             <span class="mx-3 hidden styles_line"></span>
-            <div class="pos-relative d-flex flex-column">
-              <a href="../html/shopping-cart.html" class="position-relative d-inline-flex pr-2 pl-0 p-lg-2 bg-000 radius py-2" data-cro-id="header-cart" style="color: white;" id="shopping-id">
-                <div class="d-flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
-                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                  </svg>
+                <div class="pos-relative d-flex flex-column">
+                    {% with total_items=sabad|length %}
+                       {% if sabad|length > 0 %}
+                           سبد شما
+                           <a href="{% url 'sabad:sabad_detail' %}">
+                               {{ total_items }} item{{ total_items }}تومان , {{ sabad.get_total_price }}
+                           </a>
+                       {% else %}
+                         سبد شما خالی است(الان کی ضرر میکنه من یا تو؟)
+                       {% endif %}
+                    {% endwith %}
+
+
+                      <i class="bi bi-cart3 border " id="basket-icon"></i>
                 </div>
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -281,3 +277,17 @@ crossorigin="anonymous">
 <!--script end-->
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

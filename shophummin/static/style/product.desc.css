@@ -1,0 +1,205 @@
+.custom-nav-tabs-product-page .nav-link {
+    border-radius: 0 !important;
+}
+
+.custom-nav-tabs-product-page .nav-item.show .nav-link, .custom-nav-tabs-product-page .nav-link.active {
+    border-top: 3px solid red !important;
+}
+.custom-nav-tabs-product-page .nav-link {
+    font-size: 14px;
+    outline: none;
+}
+
+/* #details-tab {
+    background: white !important;
+} */
+
+.custom-tab-pane-product h5 , .custom-tab-pane-product-details h5 {
+    color: #646363;
+}
+
+.product-desc {
+    font-size: 14px;
+    line-height: 32px;
+    background-color: #ebebeb;
+}
+
+.product-all-rate p {
+    font-size: 14px;
+}
+
+.progress-product-wrapper {
+    background-color: #ebebeb  ;
+    margin-right: 2px;
+    margin-bottom: 10px;
+}
+
+.product-main-desc {
+    font-size: 14px;
+    line-height: 36px;
+}
+
+.product-desc-step li{
+    border-right: 2px solid #6e6c6cbd;
+    /* padding-right: 35px; */
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.product-desc-step li i{
+    position: absolute;
+    top: -20px !important;
+    right: -11px !important;
+    font-size: 20px;
+}
+
+.p-img-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.custom-tab-pane-product-details ul li .key{
+    background: #d4d2d247;
+    flex: 0 0 20%;
+    height: 36px;
+    font-size: 16px;
+    margin-right: 0px !important;
+}
+
+.custom-tab-pane-product-details ul li .value{
+    background: #d4d2d247;
+    flex: 0 0 78%;
+    height: 36px;
+    font-size: 16px;
+
+}
+
+.custom-tab-pane-product-details ul li {
+    margin-right: 13px;
+}
+
+.custom-tab-pane-product-details ul p {
+    font-size: 15px;
+    margin-right: 12px !important;
+}
+
+.custom-tab-pane-product-details ul p i{
+    vertical-align: -3px;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.add-comment p:first-child {
+    font-size: 15px;
+    color: #989898;
+}
+
+.add-comment p:nth-child(2) {
+    font-size: 15px;
+    color: #b9b8b8;
+}
+
+.custom-product-media p {
+    font-size: 17px;
+}
+
+/* nazarat user */
+.user-role {
+    font-size: 11px;
+    /* padding: 10px; */
+    height: 10px !important;
+    vertical-align: -1px;
+    background: #fff8dc96;
+    border: 1px solid bisque;
+    border-radius: 43px;
+}
+
+.proposal i {
+    vertical-align: text-top;
+}
+
+.proposal {
+    /* color: #27cb43; */
+    background-color: #007bffa1;
+    font-size: medium;
+    /* border: 1px solid; */
+    /* border-radius: 10px; */
+    text-align: center;
+    /* height: 32px;
+    width: 145px; */
+    width: fit-content;
+}
+
+.proposal p {
+    float: left;
+    margin-right: 8px !important;
+}
+
+.user-details p {
+    font-size: 15px;
+
+}
+
+.p_supplien {
+    font-size: 16px;
+}
+
+.p_color {
+    font-size: 14px;
+}
+
+.user_p_comment p {
+    font-size: 17px;
+}
+
+.user_p_comment .bnefit_comm_title {
+    font-size: 16px;
+}
+
+.user_p_comment ul.vav li i {
+    font-size: 13px;
+}
+
+i.bi.bi-bullseye.mr-1 {
+    font-size: 10px;
+}
+
+.add-comment a {
+    float: left;
+    width: 200px;
+    background-color: white;
+    color: red;
+    border: 1px solid red; 
+}
+
+/* user-comment-product */
+.user_p_comment ul.nav li {
+    font-size: 14px;
+}
+
+.user_p_comment ul.nav li i{
+    font-size: 27px;
+    vertical-align: -7px;
+    color: #7171e4;
+}
+
+.user_p_comment ul.nav_negative li i {
+    color: #f94343f7;
+}
+
+.comm_vote {
+    font-size: 16px;
+    float: inline-end;
+    background: #dcdcdcad;
+    padding: 6px;
+}
+
+/* login-add-comment */
+.add_comments p {
+    font-size: 16px;
+    color: #198754;
+    background-color: aliceblue;
+    height: 53px;
+    /* width: fit-content; */
+    /* border-radius: 10px */
+}
