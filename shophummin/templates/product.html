@@ -67,20 +67,7 @@
           <!-- <s class="cl-price">350000</s> -->
           <span>{{ product.price }}</span>
         </div>
-        <div class="brand-cat"><span>برند :  {{products_detail.brand}}</span></div>
-        <p class="p-info mt-2 mb-0">ویژگی های محصول</p>
-        <ul class="nav flex-column p-details pl-3 py-2">
-          <li class="nav-item">
-            <a href="" class="nav-link pr-0"> <i class="bi bi-check-circle-fill"></i>{{products_detail.attributes}}</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link pr-0"> <i class="bi bi-check-circle-fill"></i>{{products_detail.attributes}}</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link pr-0"> <i class="bi bi-check-circle-fill"></i>{{products_detail.attributes}}</a>
-          </li>
-        </ul>
-
+        <div class="brand-cat"><span>برند :  {{product.brand}}</span></div>
         <form method="post" action="{% url 'sabad:sabad_add' product_detail.id %}">
             {{ sabad_add_product_form }}
             {% csrf_token %}
@@ -108,26 +95,26 @@
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane custom-tab-pane-product fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
           <h5 class="p-3">معرفی محصول</h5>
-          <p class="p-3 m-3 product-desc">{{products_detail.description}}
+          <p class="p-3 m-3 product-desc">{{product.description}}
            </p>
 
           <div class="container">
             <div class="row mt-4">
               <div class="col-sm-12">
                 <h5 class="p-3">نحوه استفاده ماژول بلوتوث</h5>
-                  {{products_detail.instructions }}
+                  {{product.instructions }}
 
 
                 <ul class="nav flex-column product-desc-step m-5 mt-4">
                   <li class="nav-item px-4 position-relative">
                     <i class="bi bi-record-circle"></i>
-                    <p class="product-main-desc"> برای تغییر در تنظیمات و همچنین دریافت اطلاعات خود ماژول می بایست وارد حالت AT COMMAND شوید. برای این کار می توانید مراحل زیر را دنبال کنید.
+                    <p class="product-main-desc">{{product.instructions }}
                       </p>
-                      <p>1- پایه KEY-1 (پایه 34) ماژول بلوتوث سریال HC-05 را به 3.3 ولت وصل کنید</p>
-                      <p>2- پایه های سریال RX و TX خود را بصورت ضربدری به برد متصل کنید. (RX به TX )
+                      <p>{{product.instructions }}</p>
+                      <p>{{product.instructions }}
                       </p>
                       <p>
-                        3- تغذیه مدار را متصل کنید. توجه داشته باشید که در صورتی که این مراحل را به درتس انجام داده باشید، چشمک زن (پایه 31) بصورت یک ثانیه ای چشمک خواهد زد، در حالت عادی بسیار تندتر این چشمک زدن انجام می شود.
+                        {{product.instructions }}
                       </p>
                     <div class="p-img-wrapper">
                       <img src="{% static 'img/product/tak/telesk-bluetooth02.jpg' %}"  width="500px" height="350px"alt="">
@@ -135,11 +122,11 @@
                   </li>
                   <li class="nav-item px-4 position-relative">
                       <i class="bi bi-record-circle"></i>
-                      <p>4- پایه KEY-1 را قطع کنید.</p>
-                      <p>  5- در قسمت تنظیمات سریال ترمینال خود، بودریت بر روی 38400 تنظیم شود. نکته بسیار مهم فعال بودن دو گزینه CF و LR در تنظیمات سریال می باشد.
+                      <p>{{product.instructions }}</p>
+                      <p>  {{product.instructions }}
                       </p>
                       <p>
-                        6- در صورت درست بودن تمامی مراحل، با ارسال دستور AT پاسخ OK را دریافت خواهید کرد.
+                        {{product.instructions }}
                       </p>
                       <div class="p-img-wrapper">
                         <img src="{% static 'img/product/tak/telesk-bluetooth03.png' %}" width="500px" height="350px"alt="">
@@ -156,41 +143,41 @@
           <ul class="nav flex-column">
             <p class="my-3"><i class="bi bi-caret-left-fill"></i>مشخصات کلی</p>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 mr-5">ولتاژ</p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2">3.3 ولت</p></div>
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 mr-5">{{product.specification }}</p></div>
+              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
             </li>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">فرکانس</p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2">ISM Band 2.4Hhz
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
+              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}
               </p></div>
             </li>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">حساسیت</p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2">84dBm</p></div>
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
+              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
             </li>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">حداکثر سرعت</p></div>
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
               <div class="value d-flex align-items-center">
-                <p class="m-0 ml-2">2.1Mbps</p>
+                <p class="m-0 ml-2">{{product.specification }}</p>
               </div>
             </li>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">مدولاسیون</p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2">GFSK</p></div>
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
+              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
             </li>
             <li class="nav-item d-flex mb-3">
               <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">مد</p></div>
               <div class="value d-flex align-items-center"><p class="m-0 ml-2">master ,slave</p></div>
             </li>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">محدودیت دمای کاری
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}
               </p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2">25- الی 75 درجه سانتی گراد</p></div>
+              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
             </li>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">پروتکل ارتباطی
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}
               </p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2">USART</p></div>
+              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
             </li>
           </ul>
         </div>

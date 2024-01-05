@@ -5,7 +5,16 @@ from django.urls import reverse
 
 class Product(models.Model):
     name = models.CharField(max_length=100)
+    # برای قسمت معرفی
     description = models.TextField()
+    # برای قسمت دیدگاه
+    comments = models.TextField()
+    # برای قسمت مشخصات
+    specification = models.TextField()
+    # برای قسمت نحوه استفاده
+    instructions = models.TextField()
+    # برند
+    brand = models.TextField()
     create_time = models.DateTimeField(auto_now_add=True)
     update_time = models.DateTimeField(auto_now=True)
     image = models.ImageField(upload_to='images/product/%Y/%m/%d', blank=True)
@@ -34,22 +43,10 @@ class Order(models.Model):
         return str(self.id)
 
 
-class Products_detail(models.Model):
+class Products_Images(models.Model):
     product = models.ForeignKey(Product, null=True, on_delete=models.SET_NULL)
-    product_image2 = models.ImageField(upload_to='images/product/%Y/%m/%d', blank=True)
-    product_image3 = models.ImageField(upload_to='images/product/%Y/%m/%d', blank=True)
-    # برای قسمت معرفی
-    description = models.TextField()
-    # برای قسمت دیدگاه
-    comments = models.TextField()
-    # برای قسمت مشخصات
-    specification = models.TextField()
-    # برای قسمت نحوه استفاده
-    instructions = models.TextField()
-    # برند
-    brand = models.TextField()
-    # ویژگی های محصول
-    attributes = models.TextField()
+    products_image2 = models.ImageField(upload_to='images/product/%Y/%m/%d', blank=True)
+    products_image3 = models.ImageField(upload_to='images/product/%Y/%m/%d', blank=True)
 
 
 class OrderItem(models.Model):
