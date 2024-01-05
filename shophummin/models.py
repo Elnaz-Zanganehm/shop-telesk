@@ -48,6 +48,9 @@ class Products_Images(models.Model):
     products_image2 = models.ImageField(upload_to='images/product/%Y/%m/%d', blank=True)
     products_image3 = models.ImageField(upload_to='images/product/%Y/%m/%d', blank=True)
 
+    def __str__(self):
+        return str(self.id)
+
 
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
