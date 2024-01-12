@@ -40,7 +40,7 @@ def product(request, pk):
 
 
 def store(request):
-    product_list = models.Product.objects.all()[:7]
+    product_list = models.Product.objects.all()[:6]
     return render(request, 'store.html', {'product_list': product_list})
 
 

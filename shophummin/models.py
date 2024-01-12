@@ -6,15 +6,15 @@ from django.urls import reverse
 class Product(models.Model):
     name = models.CharField(max_length=100)
     # برای قسمت معرفی
-    description = models.TextField()
+    description = models.TextField(blank=True)
     # برای قسمت دیدگاه
-    comments = models.TextField()
+    comments = models.TextField(blank=True)
     # برای قسمت مشخصات
-    specification = models.TextField()
+    specification = models.TextField(blank=True)
     # برای قسمت نحوه استفاده
-    instructions = models.TextField()
+    instructions = models.TextField(blank=True)
     # برند
-    brand = models.TextField()
+    brand = models.TextField(blank=True)
     create_time = models.DateTimeField(auto_now_add=True)
     update_time = models.DateTimeField(auto_now=True)
     image = models.ImageField(upload_to='images/product/%Y/%m/%d', blank=True)

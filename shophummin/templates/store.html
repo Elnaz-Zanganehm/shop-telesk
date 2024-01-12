@@ -79,7 +79,7 @@
                 <!-- box1 -->
                 <div class="product-box mt-4">
                     <img src="{{product.image_url}}" alt="" class="product-img w-75 h-50">
-                    <button class="add-to-basket">+ افزودن به سبد خرید</button>
+                    <button class="add-to-basket"  href="{% url 'shophummin:checkout' %}">+ افزودن به سبد خرید</button>
                     <h2 class="product-title mb-2"><a href="{{ product.get_absolute_url }}" ></a>{{ product.name }}</h2>
                     <span class="price">{{ product.price }}</span>
                 </div>

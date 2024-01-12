@@ -30,6 +30,8 @@
         <ol class="breadcrumb custom-breadcrumb">
           <li class="breadcrumb-item px-2"><a href="#" class="px-0">خانه</a></li>
           <li class="breadcrumb-item active px-0" id="icon_breadcrumb" aria-current="page">سبد خرید</li>
+            <li class="breadcrumb-item active px-0" id="icon_breadcrumb" aria-current="page">ثبت سفارش</li>
+
         </ol>
       </nav>
     </div>
@@ -39,15 +41,15 @@
 
 
 <!-- BREADCRUMB -->
-<div id="breadcrumb" class="section">
-    <!-- container -->
-    <div class="container">
-        <!-- row -->
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="breadcrumb-header">ثبت سفارش </h3>
-            </div>
-        </div>
+{#<div id="breadcrumb" class="section">#}
+{#    <!-- container -->#}
+{#    <div class="container">#}
+{#        <!-- row -->#}
+{#        <div class="row">#}
+{#            <div class="col-md-12">#}
+{#                <h3 class="breadcrumb-header">ثبت سفارش </h3>#}
+{#            </div>#}
+{#        </div>#}
         <!-- /row -->
     </div>
     <!-- /container -->
@@ -70,7 +72,7 @@
                     </div>
                         <form action="." method="post">
                             {% csrf_token %}
-                            <input class="primary-btn order-submit" value="پرداخت آنلاین">
+                            <input class=" order-submit" style="background: #481ac5ba" value="پرداخت آنلاین">
                         </form>
                     </div>
               <!--/Order Details -->

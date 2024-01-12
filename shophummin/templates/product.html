@@ -45,11 +45,11 @@
 <div class="container bg-white mt-5" style="margin-bottom: 300px;">
   <div class="row">
       <div class="col-sm-12 col-md-5" id="el">
-         <img class="img-fluid" src="{{product.image_url}}" alt="">
+         <img class="img-fluid" src="{{product_detail.image_url}}" alt="">
       </div>
       <div class="col-sm-12 col-md-7 pr-4 product-info">
         <h3 class="mt-4 d-flex justify-content-between product-page-title">
-          <span>{{ product.name }}</span>
+          <span>{{ product_detail.name }}</span>
           <span>
             <a href=""><i class="bi bi-heart mr-2 is-active"></i></a>
             <a href=""><i class="bi bi-share-fill mr-2"></i></a>
@@ -65,9 +65,9 @@
         </div>
         <div class="offer-price product-page-price mt-3">
           <!-- <s class="cl-price">350000</s> -->
-          <span>{{ product.price }}</span>
+          <span>{{ product_detail.price }}</span>
         </div>
-        <div class="brand-cat"><span>برند :  {{product.brand}}</span></div>
+        <div class="brand-cat"><span>برند :  {{product_detail.brand}}</span></div>
         <form method="post" action="{% url 'sabad:sabad_add' product_detail.id %}">
             {{ sabad_add_product_form }}
             {% csrf_token %}
@@ -95,26 +95,26 @@
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane custom-tab-pane-product fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
           <h5 class="p-3">معرفی محصول</h5>
-          <p class="p-3 m-3 product-desc">{{product.description}}
+          <p class="p-3 m-3 product-desc">{{product_detail.description}}
            </p>
 
           <div class="container">
             <div class="row mt-4">
               <div class="col-sm-12">
                 <h5 class="p-3">نحوه استفاده ماژول بلوتوث</h5>
-                  {{product.instructions }}
+                  {{product_detail.instructions }}
 
 
                 <ul class="nav flex-column product-desc-step m-5 mt-4">
                   <li class="nav-item px-4 position-relative">
                     <i class="bi bi-record-circle"></i>
-                    <p class="product-main-desc">{{product.instructions }}
+                    <p class="product-main-desc">{{product_detail.instructions }}
                       </p>
-                      <p>{{product.instructions }}</p>
-                      <p>{{product.instructions }}
+                      <p>{{product_detail.instructions }}</p>
+                      <p>{{product_detail.instructions }}
                       </p>
                       <p>
-                        {{product.instructions }}
+                        {{product_detail.instructions }}
                       </p>
                     <div class="p-img-wrapper">
                       <img src="{% static 'img/product/tak/telesk-bluetooth02.jpg' %}"  width="500px" height="350px"alt="">
@@ -122,11 +122,11 @@
                   </li>
                   <li class="nav-item px-4 position-relative">
                       <i class="bi bi-record-circle"></i>
-                      <p>{{product.instructions }}</p>
-                      <p>  {{product.instructions }}
+                      <p>{{product_detail.instructions }}</p>
+                      <p>  {{product_detail.instructions }}
                       </p>
                       <p>
-                        {{product.instructions }}
+                        {{product_detail.instructions }}
                       </p>
                       <div class="p-img-wrapper">
                         <img src="{% static 'img/product/tak/telesk-bluetooth03.png' %}" width="500px" height="350px"alt="">
@@ -143,41 +143,41 @@
           <ul class="nav flex-column">
             <p class="my-3"><i class="bi bi-caret-left-fill"></i>مشخصات کلی</p>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 mr-5">{{product.specification }}</p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 mr-5">{{product_detail.specification }}</p></div>
+              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product_detail.specification }}</p></div>
             </li>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product_detail.specification }}</p></div>
+              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product_detail.specification }}
               </p></div>
             </li>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product_detail.specification }}</p></div>
+              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product_detail.specification }}</p></div>
             </li>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product_detail.specification }}</p></div>
               <div class="value d-flex align-items-center">
-                <p class="m-0 ml-2">{{product.specification }}</p>
+                <p class="m-0 ml-2">{{product_detail.specification }}</p>
               </div>
             </li>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product_detail.specification }}</p></div>
+              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product_detail.specification }}</p></div>
             </li>
             <li class="nav-item d-flex mb-3">
               <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">مد</p></div>
               <div class="value d-flex align-items-center"><p class="m-0 ml-2">master ,slave</p></div>
             </li>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product_detail.specification }}
               </p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
+              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product_detail.specification }}</p></div>
             </li>
             <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}
+              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">{{product_detail.specification }}
               </p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product.specification }}</p></div>
+              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product_detail.specification }}</p></div>
             </li>
           </ul>
         </div>
