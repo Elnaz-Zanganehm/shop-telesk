@@ -79,8 +79,12 @@
                 <!-- box1 -->
                 <div class="product-box mt-4">
                     <img src="{{product.image_url}}" alt="" class="product-img w-75 h-50">
-                    <button class="add-to-basket"  href="{% url 'shophummin:checkout' %}">+ افزودن به سبد خرید</button>
-                    <h2 class="product-title mb-2"><a href="{{ product.get_absolute_url }}" ></a>{{ product.name }}</h2>
+                    <form action="{% url 'sabad:sabad_add' product.id %}" method="POST">
+                        {% csrf_token %}
+                    {{ sabad_add_product_form }}
+                    <button class="add-to-basket" type="submit">+ افزودن به سبد خرید</button>
+                    </form>
+                    <h2 class="product-title mb-2"><a style="color: #111111" href="{{ product.get_absolute_url }}">{{ product.name }}</a></h2>
                     <span class="price">{{ product.price }}</span>
                 </div>
                   {% endfor %}

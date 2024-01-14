@@ -30,14 +30,14 @@
                     </td>
                     <td>{{ product.name }}</td>
                     <td>
-                        <form  action="{% url 'sabad:sabad_add' product_id %}" method="post">
+                        <form  action="{% url 'sabad:sabad_add' product.id %}" method="post">
                             {{ item.update_product_count_form.product_count }}
                             {{ item.update_product_count_form.update }}
                             {% csrf_token %}
                             <input type="submit" value="update">
                         </form>
                     </td>
-                    <td><a href="{% url 'sabad:sabad_remove' product_id %}">Remove</a></td>
+                    <td><a href="{% url 'sabad:sabad_remove' product.id %}">Remove</a></td>
                     <td class="num">تومان{{  item.price }}</td>
                     <td class="num">تومان{{ item.total_price }}</td>
                 </tr>
