@@ -63,16 +63,17 @@
         <!-- row -->
         <div class="row">
             <!--Order Details -->
-            <div class="col-md-12 order-details">
+            <div class="col-md-12 order-details border" style="height: 300px; background-color: #f8f9fad6;">
                 <div class="section-title text-center">
-                    <h3 class="title">از خرید شما مچکریم </h3>
+                    <h2 class="title m-4">از خرید شما مچکریم </h2>
                 </div>
                 <div class="order-summary">
-                    <p> : شماره سفارش شما {{ order.id }}</p>
+                    <p class="mx-3 mb-0"> شماره سفارش شما : {{ order.id }}</p>
                     </div>
                         <form action="." method="post">
                             {% csrf_token %}
-                            <input class=" order-submit" style="background: #481ac5ba" value="پرداخت آنلاین">
+                          <button class="order-submit py-2 border rounded-2 m-3 px-2" style="background: #8769dcba; text-align: center;"> پرداخت آنلاین</button>
+                            <!-- <input class="order-submit py-2 border rounded-2 m-3" style="background: #8769dcba; text-align: center;" value="پرداخت آنلاین"> -->
                         </form>
                     </div>
               <!--/Order Details -->
@@ -80,6 +81,39 @@
             <!--/row -->
           </div>
         <!-- container -->
-        </div>
-        <!-- /SECTION -->
+ </div>
+<!-- /SECTION -->
+
+
+
+
+
+
+
+{#<!-- SECTION -->#}
+{#<div class="section">#}
+{#    <!--container -->#}
+{#    <div class="container">#}
+{#        <!-- row -->#}
+{#        <div class="row">#}
+{#            <!--Order Details -->#}
+{#            <div class="col-md-12 order-details">#}
+{#                <div class="section-title text-center">#}
+{#                    <h3 class="title">از خرید شما مچکریم </h3>#}
+{#                </div>#}
+{#                <div class="order-summary">#}
+{#                    <p> : شماره سفارش شما {{ order.id }}</p>#}
+{#                    </div>#}
+{#                        <form action="." method="post">#}
+{#                            {% csrf_token %}#}
+{#                            <input class=" order-submit" style="background: #481ac5ba" value="پرداخت آنلاین">#}
+{#                        </form>#}
+{#                    </div>#}
+{#              <!--/Order Details -->#}
+{#               </div>#}
+{#            <!--/row -->#}
+{#          </div>#}
+{#        <!-- container -->#}
+{#        </div>#}
+{#        <!-- /SECTION -->#}
  {% endblock %}
