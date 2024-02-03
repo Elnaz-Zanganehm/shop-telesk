@@ -44,6 +44,7 @@ def store(request):
     sabad_add_product_form = SabadAddProductForm()
     return render(request, 'store.html', {'product_list': product_list, 'sabad_add_product_form': sabad_add_product_form})
 
+
 def aboutteam(request):
     return render(request, 'aboutteam.html')
 

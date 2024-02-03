@@ -30,7 +30,7 @@ def sabad_detail(request):
 
 def sabad_remove(request, product_id):
     sabad = Sabad(request)
-    product = get_object_or_404(models.Product, product_id)
+    product = get_object_or_404(models.Product, pk=product_id)
     sabad.remove(product)
     return redirect(reverse('sabad:sabad_detail'))
 

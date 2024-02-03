@@ -156,3 +156,10 @@ i.bi.bi-youtube {
     width: 35px;
     padding: 5px 6px;
 }
+a.dropdown-item {
+    text-align: right;
+}
+
+ul.dropdown-menu.show {
+    right: 4px;
+}
