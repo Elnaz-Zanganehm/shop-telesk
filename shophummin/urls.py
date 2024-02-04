@@ -12,5 +12,7 @@ urlpatterns = [
     path('login/', views.user_login, name='login'),
     path('logout/', views.user_logout, name='logout'),
     path('aboutteam/', views.aboutteam, name='aboutteam'),
+    path('to-bank/<int:order_id>/', views.to_bank, name='to_bank'),
+    path('callback/', views.callback, name='callback'),
 
  ]
