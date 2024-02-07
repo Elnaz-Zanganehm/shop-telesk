@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ {% block title %} تلسک {% endblock %}
+
+
+ {% block static_files %}
+
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'style/_about-member-team.css' %}">
+    <link rel="stylesheet" href="{% static 'style/allstyle.css' %}">
+    <!-- <link rel="stylesheet" href="./style/style.css"> -->
+    <link rel="stylesheet" href="{% static 'style/product-breadcrumb.css' %}">
+    <link rel="stylesheet" href="{% static 'style/botton-top.css' %}">
+    <link rel="stylesheet" href="{% static 'style/login-form-modal.css' %}">
+    <link rel="stylesheet" href="{% static 'style/checkout.css' %}">
+    <!-- <link rel="stylesheet" href="./style/allstyle.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+    <!-- navbar-addres begin-->
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-sm-12">
+          <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="navbar_address">
+            <ol class="breadcrumb custom-breadcrumb">
+              <li class="breadcrumb-item px-2"><a href="#" class="px-0">خانه</a></li>
+              <li class="breadcrumb-item active px-0" id="icon_breadcrumb" aria-current="page">درباره تلسک</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}
+{% block content %}
+
+    <!-- navbar-addres end-->
+    <!-- about telesk begin -->
+    <section class="container shadow py-3 my-">
+      <div class="col-sm-12">
+        <h4><i class="bi bi-caret-left-fill h6"></i>تلسک، از تولد یک ایده تا اینجا</h4>
+        <p class="mt-3 content-about-telesk">انسان خلق می‌کند و جهان با فکر و دستان ماست که روز‌به‌روز گسترده‌تر می‌شود. سنگ بنای پیشرفت جهان کار انسان است. از همان اولین کنجکاوی‌ها و اولین سازه‌های سنگی و چوبی آدم گرفته تا ماشین‌های عظیم امروزی که قطعات مختلف یک خودرو را سرهم می‌کنند، این شجاعت و اراده انسان بوده است که او را در رسیدن به جایگاه فعلی‌اش یاری کرده. هامین قدمی دیگر به سوی بسط این کنجکاوی است؛ قدمی دیگر است که با اراده مضاعف به سوی خلق کردن برداشته می‌شود و سهمی در گسترش رباتیک در ایران به خود اختصاص می‌دهد.</p>
+      </div>
+    </section>
+    <section class="container shadow py-3 my-5">
+      <div class="col-sm-12">
+        <h4><i class="bi bi-caret-left-fill h6"></i>چرا هامین؟</h4>
+        <p class="mt-3 content-about-telesk">نام هامین از نام یکی از کاراکتر‌ها در داستان‌های اسیموف گرفته شده است. هامین یک خبرنگار است که بشریت را از انقلاب ربات‌ها نجات می‌دهد- که البته خود او یک ربات بود. این نام به نوعی بازی با کلمه انسان () بوده و با نگاهی دقیق‌تر به جهان امروز متوجه خواهیم شد که چنین بازی با کلمه‌ای انقدر‌ها هم نادرست نیست! ما در زمانه‌ای زندگی می‌کنیم که انسان ربات هارا خقل می‌کند و به آنها قدرت فکر کردن می‌دهد. پس بعید نیست روزی رباتی مانند هامین یکی از قهرمان های دنیای واقعی ما شود</p>
+      </div>
+    </section>
+    <section class="container shadow py-3 my-5">
+      <div class="col-sm-12">
+        <h4><i class="bi bi-caret-left-fill h6"></i>چالش ما</h4>
+        <p class="mt-3 content-about-telesk">همچنان که مسئله و چالش همواره نقطه شروع همه اکتشافات انسان بوده‌اند، شروع راه ما هم با یک چالش همراه بود. چالشی که ناگهان سروکله‌اش پیدا شد و از پشت پنجره برای ما دست تکان می‌داد، و این ما بودیم که خودمان را میان یک دوراهی یافتیم: روند زندگی عادی خود را ادامه بدهیم، یا برای حل این چالش، سختی هایی را به جان بخریم. پیشرفت همواره از پذیرش و حرکت اغاز میشود. پس ما هم وجود چالش رو‌به‌رویمان را پذیرفتیم و برای حل ان حرکت را اغاز کردیم. اوایل تابستان 1401 بود که از دل یک جلسه دو نفره مربیگری رباتیک، یک مسئله بوجود آمد و تا به امروز در تلاش برای ارائه راه‌حل برای آن هستیم. ایده‌ای متولد شد، رشد کرد، بخش هایی به ان اضافه و بخش هایی از ان کم شد و در نهایت موفق به طراحی یک محصول اولیه شدیم. در این مسیر عزیزانی به پیوستند که در ادامه به بزرگ تر شدن این ایده کمک کردند. </p>
+      </div>
+    </section>
+    <section class="mt-3 container shadow py-3 my-5">
+      <div class="col-sm-12">
+        <h4><i class="bi bi-caret-left-fill h6"></i>مسئله چی بود؟</h4>
+        <p class="mt-3 content-about-telesk">حالا سئوال اینجاست که آن چالشی که سر راه ما قرار گرفت چه بود؟ در آن جلسه دونفره قرار بود نحوه کارکرد و آموزش ربات () بررسی شود. این ربات یکی از بهترین گزینه‌های آموزشی مطرح در سطح جهان است. قیمت بالای آن در کشور ایران یکی از نقاط ضعف آن است. درکنارآن، این ربات کاملا ماژولر است و به صورت تخصصی آموزش برنامه‌نویسی و مکانیک ربات را هدف خود تعیین کرده است؛ درنتیجه، در مفاهیم الکترونیک به نگاهی سطحی و شناخت در حد انتخاب جهت استفاده بسنده کرده است. ما این دو مورد را در آموزش رباتیک و برنامه‌نویسی لحاظ کردیم و تصمیم گرفتیم مسیر آموزش رباتیک در ایران را با حل این دو چالش هموار‌تر کنیم. در ابتدا پردازنده () رو بررسی کرده و موارد مشابه و قابلیت های آنها را مطالعه کردیم. رزبری‌پای و آردوینو دو گزینه جایگزین مطرح در دنیای رباتیک هستند. رزبری‌پای قابلیت های گسترده‌ای دارد و آردوینو بسیار عام، ساده و رایج است. با بررسی این دو محصول هدف اولیه پروژه ما مشخص شد: طراحی پردازنده‌ای با قابلیت‌های نسبی رزبری‌پای و سادگی در استعمال شبیه به آردوینو. برای اولین قدم در پروژه عملی، از قابلیت‌های خاص رزبری‌پای پردازش تصویر انجام شد و در قالب پروژه با آردوینو پیاده سازی شد.
+
+این پروژه پردازش تصویر با نمایش عدد با دست و تشخیص آن توسط پردازنده شروع شد و با فرمان تصویری دست به ماشین رباتیک تکمیل شد. در ادامه بررسی‌های نمونه‌های بازار و با تجربه در زمینه برگزاری دوره‌های آموزشی رباتیک و درنظر گرفتن شرایط موجود در حین آموزش و یادگیری، مسئله سخت‌افزار موردنیاز جهت برنامه‌نویسی چالش دیگری بود که سر راه ما سبز شد. ازاین‌رو، به ایده اولیه فراهم نمودن پردازنده کاربردی، یک ایده محوری دیگر هم افزوده شد: ایجاد یک بستر برنامه‌نویسی ربات با گوشی موبایل. در این مرحله امکان پیاده‌سازی این ایده را سنجیدیم و با موفقیت مواجه شدیم: طراحی پردازنده مبتنی بر برنامه نویسی با موبایل آغاز شد. به صورت موازی با این مرحله، شرکتمان را ثبت کردیم و بعد از اتمام طراحی نام تلسک را برای محصول آموزشی شرکت انتخاب کردیم.    
+</p>
+      </div>
+    </section>
+    <section class="container shadow py-3 my-5">
+      <div class="col-sm-12">
+        <h4><i class="bi bi-caret-left-fill h6"></i>چرا تلسک؟</h4>
+        <p class="mt-3 content-about-telesk">دلیل انتخاب نام تلسک برای بورد‌های آموزشی شرکت این بود:</p>
+        <p class="content-about-telesk">با توجه به سابقه اسم‌ گذاری و انتخاب نام میوه که شرکت های بزرگ در حوزه الکترونیک داشتند.</p>
+        <p class="content-about-telesk">رقیب اصلی خودمان را رزبری‌پای میدانستیم که نام میوه را با خود یدک می‌کشد و شباهت تلسک و رزبری‌پای</p>
+        <p class="content-about-telesk">تکیه بر فرهنگ و محصول منطقه  </p>
+        <p class="content-about-telesk">تلسک: خوشه کوچک انگور است که جزو خوشه بزرگ است یعنی بر خوشه بزرگ چسبیده است (آنندراج). خوشه کوچک انگور که یک جز از خوشه بزرگ است. (ناظم الاطبا) </p>
+        <p class="content-about-telesk">بنابرین: نام شرکت را سازه رباتیک هامین و نام محصول شرکت را تلسک برگزیدیم.</p>
+      </div>
+    </section>
+    <!-- about telesk end -->
+
+    <!--script begin-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous">
+    </script>
+
+    <script src="../js/botton-top.js"></script>
+    <!-- <script src="./js/store.js"></script> -->
+    <!--script end-->
+   {% endblock %}

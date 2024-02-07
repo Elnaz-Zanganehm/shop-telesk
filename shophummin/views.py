@@ -14,8 +14,25 @@ def index(request):
     return render(request, 'index.html')
 
 
+# @login_required
+# def checkout(request):
+#     sabad = Sabad(request)
+#     if request.method == 'POST':
+#         order = models.Order.objects.create(customer=request.user)
+#         for item in sabad:
+#             models.OrderItem.objects.create(order=order,
+#                                             product=item['product'],
+#                                             product_price=item['price'],
+#                                             product_count=item['product_count'],
+#                                             product_cost=Decimal(item['product_count']) * Decimal(item['price']))
+#         # order.customer = request.user
+#         # order.save()
+#         sabad.clear()
+#         return render(request, 'order_detail.html', {'order': order})
+#
+#     return render(request,  'checkout.html', {'sabad': sabad})
 @login_required
-def checkout(request):
+def ordercompletion(request):
     sabad = Sabad(request)
     if request.method == 'POST':
         order = models.Order.objects.create(customer=request.user)
@@ -30,7 +47,7 @@ def checkout(request):
         sabad.clear()
         return render(request, 'order_detail.html', {'order': order})
 
-    return render(request,  'checkout.html', {'sabad': sabad})
+    return render(request,  'ordercompletion.html', {'sabad': sabad})
 
 
 def product(request, pk):
@@ -41,12 +58,15 @@ def product(request, pk):
 
 
 def store(request):
-    product_list = models.Product.objects.all()[:6]
+    product_list = models.Product.objects.all()[:30]
     sabad_add_product_form = SabadAddProductForm()
     return render(request, 'store.html', {'product_list': product_list, 'sabad_add_product_form': sabad_add_product_form })
 
+
 merchant = '****************************'
 client = Client('https://www.zarinpal.com/pg/services/WebGate/wsdl')
+
+
 def to_bank(request, order_id):
     order = get_object_or_404(models.Order, id=order_id)
     amount = 0
@@ -87,6 +107,10 @@ def callback(request):
 
 def aboutteam(request):
     return render(request, 'aboutteam.html')
+
+
+def abouttelesk(request):
+    return render(request, 'abouttelesk.html')
 
 
 # LOGIN,LOGOUT,SIGNUP

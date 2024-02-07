@@ -10,3 +10,14 @@ class SabadAddProductForm(forms.Form):
                                 initial=False,
                                 widget=forms.HiddenInput)
 
+# class OrdercompletionForm(forms.Form):
+#     order_date = forms.DateTimeField(auto_now_add=True)
+#     cpost = forms.CharField(max_length=10, blank=True)
+#     address = forms.TextField(blank=True)
+#     name = forms.TextField(blank=True)
+#     family = forms.TextField(blank=True)
+#     phon = forms.TextField(blank=True)
+
+
+
+
