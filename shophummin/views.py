@@ -32,7 +32,7 @@ def index(request):
 #
 #     return render(request,  'checkout.html', {'sabad': sabad})
 @login_required
-def ordercompletion(request):
+def orderCompletion(request):
     sabad = Sabad(request)
     if request.method == 'POST':
         order = models.Order.objects.create(customer=request.user)
@@ -111,6 +111,10 @@ def aboutteam(request):
 
 def abouttelesk(request):
     return render(request, 'abouttelesk.html')
+
+
+def contactform(request):
+    return render(request, 'contactform.html')
 
 
 # LOGIN,LOGOUT,SIGNUP

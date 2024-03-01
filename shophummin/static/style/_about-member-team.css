@@ -1,0 +1,81 @@
+.img-member{
+    width: 150px;
+    border: 6px solid #d2ccfd;
+}
+
+.img-member1 {
+    width: 150px;
+    border: 6px solid #ffcf00;
+}
+
+.img-member2 {
+    width: 150px;
+    border: 6px solid #41aacd;
+}
+
+.img-member3 {
+    width: 150px;
+    border: 6px solid #d2ccfd;
+}
+
+.img-member4 {
+    width: 150px;
+    border: 6px solid #02a947;
+}
+
+.img-member5 {
+    width: 150px;
+    border: 6px solid #006cb7;
+}
+
+.img-member6 {
+    width: 150px;
+    border: 6px solid #ff6600;
+}
+
+.img-member7 {
+    width: 150px;
+    border: 6px solid #b4e1e8;
+}
+
+.img-member8 {
+    width: 150px;
+    border: 6px solid #4c2f92;
+}
+
+.img-member9 {
+    width: 150px;
+    border: 6px solid #8A2F43;
+}
+
+.img-member10 {
+    width: 150px;
+    border: 6px solid #66AFA0;
+}
+
+.img-member11 {
+    width: 150px;
+    border: 6px solid #4c2f92;
+    
+}
+
+.img-member12 {
+    width: 150px;
+    border: 6px solid rgb(202, 135, 135);
+}
+
+.img-member13 {
+    width: 150px;
+    border: 6px solid #007278;
+}
+
+.img-member14 {
+    width: 150px;
+    border: 6px solid #cd0365;
+}
+
+.name-member-team{
+    font-size: 12px;
+    margin-top: 15px;  
+    margin-right: 35px; 
+}

@@ -59,17 +59,17 @@
 }
 
 .custom-tab-pane-product-details ul li .key{
-    background: #d4d2d247;
+    /*background: #d4d2d247;*/
     flex: 0 0 20%;
-    height: 36px;
+    height:50px;
     font-size: 16px;
     margin-right: 0px !important;
 }
 
 .custom-tab-pane-product-details ul li .value{
-    background: #d4d2d247;
+    /*background: #d4d2d247;*/
     flex: 0 0 78%;
-    height: 36px;
+    height: 50px;
     font-size: 16px;
 
 }

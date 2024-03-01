@@ -5,15 +5,15 @@
 
 
  {% block static_files %}
-
     
     <link rel="stylesheet" href="{% static 'style/login-form-modal.css' %}">
     <link rel="stylesheet" href="{% static 'style/botton-top.css' %}">
     <link rel="stylesheet" href="{% static 'style/product.css' %}">
-    <link rel="stylesheet" href="{% static 'style/product.desc.css' %}">
+     <link rel="stylesheet" href="{% static 'style/product.desc.css' %}">
     <link rel="stylesheet" href="{% static 'style/product-breadcrumb.css' %}">
     <link rel="stylesheet" href="{% static 'style/zoomy.css' %}">
     <link rel="stylesheet" href="{% static 'style/allstyle.css' %}">
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -33,7 +33,8 @@
     <div class="col-sm-12">
       <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="navbar_address">
         <ol class="breadcrumb custom-breadcrumb">
-          <li class="breadcrumb-item px-2"><a href="#" class="px-0">خانه</a></li>
+          <li class="breadcrumb-item px-2"><a href="{% url 'shophummin:index' %}" class="px-0">خانه</a></li>
+            <li class="breadcrumb-item px-2"><a href="{% url 'shophummin:store' %}" class="px-0">فروشگاه</a></li>
           <li class="breadcrumb-item active px-0" id="icon_breadcrumb" aria-current="page">جزئیات محصول</li>
         </ol>
       </nav>
@@ -41,340 +42,6 @@
   </div>
 </div>
 
-{#//////////#}
-{#      <div class="container bg-white mt-5" style="margin-bottom: 300px;">#}
-{#  <div class="row">#}
-{#      <div class="col-sm-12 col-md-5" id="e">#}
-{#        <img class="img-fluid" src="{% static 'img/product/tak/telesk-bluetooth01.jpg' %}" alt="">#}
-{#      </div>#}
-{#      <div class="col-sm-12 col-md-7 pr-4 product-info">#}
-{#        <h3 class="mt-4 d-flex justify-content-between product-page-title">#}
-{#          <span>ماژول بلوتوث</span>#}
-{#          <span>#}
-{#            <a href=""><i class="bi bi-heart mr-2 is-active"></i></a>#}
-{#            <a href=""><i class="bi bi-share-fill mr-2"></i></a>#}
-{#            <a href=""><i class="bi bi-bell-fill mr-2"></i></a>#}
-{#          </span>#}
-{#        </h3>#}
-{##}
-{#        <div class="offer-price product-page-price mt-3">#}
-{#          <!-- <s class="cl-price">350000</s> -->#}
-{#          <span>130,000 تومان</span>#}
-{#        </div>#}
-{#        <!-- <div class="brand-cat"><span>برند : </span></div> -->#}
-{#        <p class="p-info mt-2 mb-0">ویژگی های محصول</p>#}
-{#        <ul class="nav flex-column p-details pl-3 py-2">#}
-{#          <li class="nav-item">#}
-{#            <a href="" class="nav-link pr-0"> <i class="bi bi-check-circle-fill"></i> ولتاژ 3.3 ولت</a>#}
-{#          </li>#}
-{#          <li class="nav-item">#}
-{#            <a href="" class="nav-link pr-0"> <i class="bi bi-check-circle-fill"></i> حساسیت 84dBm</a>#}
-{#          </li>#}
-{#          <li class="nav-item">#}
-{#            <a href="" class="nav-link pr-0"> <i class="bi bi-check-circle-fill"></i> فرکانس  ISM Band 2.4Hhz</a>#}
-{#          </li>#}
-{#        </ul>#}
-{##}
-{#        <form action="">#}
-{#          <div class="mb-3 row form-group">#}
-{#            <label for="staticEmail" class="col-sm-1 col-form-label">تعداد</label>#}
-{#            <div class="col-sm-2">#}
-{#              <input type="text" class="form-control" id="staticEmail" value="1">#}
-{#            </div>#}
-{#            <div class="col-sm-2">#}
-{#            <button type="submit" class="btn btn-success add-cart mb-3">افزودن به سبد خرید</button>#}
-{#            </div>#}
-{#          </div>#}
-{#        </form>#}
-{#      </div>#}
-{#  </div>#}
-{##}
-{#  <div class="row" style="margin-top: 100px;">#}
-{#    <div class="col-sm-12">#}
-{#      <ul class="nav nav-tabs custom-nav-tabs-product-page" id="myTab" role="tablist">#}
-{#        <li class="nav-item" role="presentation">#}
-{#          <button class="nav-link rounded-0 active" id="home-tab details-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">معرفی</button>#}
-{#        </li>#}
-{#        <li class="nav-item" role="presentation">#}
-{#          <button class="nav-link rounded-0" id="profile-tab details-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">مشخصات</button>#}
-{#        </li>#}
-{#        <li class="nav-item" role="presentation">#}
-{#          <button class="nav-link rounded-0" id="contact-tab details-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">دیدگاه</button>#}
-{#        </li>#}
-{#        <!-- <li class="nav-item" role="presentation">#}
-{#          <button class="nav-link rounded-0" id="disabled-tab details-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" >پرسش ها</button>#}
-{#        </li> -->#}
-{#      </ul>#}
-{#      <div class="tab-content" id="myTabContent">#}
-{#        <div class="tab-pane custom-tab-pane-product fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">#}
-{#          <h5 class="p-3">معرفی محصول</h5>#}
-{#          <p class="p-3 m-3 product-desc"> ماژول بلوتوث HC-05 همراه با برد کمکی یک ماژول بلوتوث با امکانات فراوان می‌باشد و می‌تواند در دو مد master و slave ، پورت سریال را  به صورت بی سیم در اختیار شما بگذارد از این رو می توانید از ماژول بلوتوث HC-05 در طراحی خانه‌های هوشمند ، هدست‌های بی سیم و … استفاده کنید. با استفاده از ماژول HC05 Bluetooth م‌یتوان دیتا را در فواصل معین ( 10 الی 33  متر) با استفاده از پروتکل بلوتوث دریافت و ارسال کرد. مزیتی که ماژول بلوتوث سریال HC-05 دارد این است که می‌تواند دیتا را  از آردوینو ، میکرو کنترلر ، تلفن  همراه و…… به  صورت سریال به ماژول انتقال داد و سپس خود ماژول دیتا را از طریق پروتکل بلوتوث ارسال خواهد کرد. همچنین می تواند دیتا را از طریق پرونکل بلوتوث Bluetooth دریافت کند و سپس آن‌ها را به سریال تبدیل کرده و به کاربر تحویل دهد.#}
-{#            ماژول بلوتوث سریال HC-05 دارای ولتاژ تغذیه بین 3.6 تا 6 ولت می باشد اما ولتاژ پایه های سریال آن باید حداکثر 3.3 ولت باشد.#}
-{#           </p>#}
-{##}
-{#          <div class="container">#}
-{#            <div class="row mt-4">#}
-{#              <div class="col-sm-12">#}
-{#                <h5 class="p-3">نحوه استفاده ماژول بلوتوث</h5>#}
-{#                <!-- <p class="product-main-desc m-3 p-3"> برای تغییر در تنظیمات و همچنین دریافت اطلاعات خود ماژول می بایست وارد حالت AT COMMAND شوید. برای این کار می توانید مراحل زیر را دنبال کنید.#}
-{#                  1- پایه KEY-1 (پایه 34) ماژول بلوتوث سریال HC-05 را به 3.3 ولت وصل کنید#}
-{#                  2- پایه های سریال RX و TX خود را بصورت ضربدری به برد متصل کنید. (RX به TX )#}
-{#                  3- تغذیه مدار را متصل کنید. توجه داشته باشید که در صورتی که این مراحل را به درتس انجام داده باشید، چشمک زن (پایه 31) بصورت یک ثانیه ای چشمک خواهد زد، در حالت عادی بسیار تندتر این چشمک زدن انجام می شود.#}
-{#                  </p> -->#}
-{##}
-{#                <ul class="nav flex-column product-desc-step m-5 mt-4">#}
-{#                  <li class="nav-item px-4 position-relative">#}
-{#                    <i class="bi bi-record-circle"></i>#}
-{#                    <p class="product-main-desc"> برای تغییر در تنظیمات و همچنین دریافت اطلاعات خود ماژول می بایست وارد حالت AT COMMAND شوید. برای این کار می توانید مراحل زیر را دنبال کنید.#}
-{#                      </p>#}
-{#                      <p>1- پایه KEY-1 (پایه 34) ماژول بلوتوث سریال HC-05 را به 3.3 ولت وصل کنید</p>#}
-{#                      <p>2- پایه های سریال RX و TX خود را بصورت ضربدری به برد متصل کنید. (RX به TX )#}
-{#                      </p>#}
-{#                      <p>#}
-{#                        3- تغذیه مدار را متصل کنید. توجه داشته باشید که در صورتی که این مراحل را به درتس انجام داده باشید، چشمک زن (پایه 31) بصورت یک ثانیه ای چشمک خواهد زد، در حالت عادی بسیار تندتر این چشمک زدن انجام می شود.#}
-{#                      </p>#}
-{#                    <div class="p-img-wrapper">#}
-{#                      <img src="../img/product/tak/telesk-bluetooth02.jpg"  width="500px" height="350px"alt="">#}
-{#                    </div>#}
-{#                  </li>#}
-{#                  <li class="nav-item px-4 position-relative">#}
-{#                      <i class="bi bi-record-circle"></i>#}
-{#                      <p>4- پایه KEY-1 را قطع کنید.</p>#}
-{#                      <p>  5- در قسمت تنظیمات سریال ترمینال خود، بودریت بر روی 38400 تنظیم شود. نکته بسیار مهم فعال بودن دو گزینه CF و LR در تنظیمات سریال می باشد.#}
-{#                      </p>#}
-{#                      <p>#}
-{#                        6- در صورت درست بودن تمامی مراحل، با ارسال دستور AT پاسخ OK را دریافت خواهید کرد.#}
-{#                      </p>#}
-{#                      <div class="p-img-wrapper">#}
-{#                        <img src="../img/product/tak/telesk-bluetooth03.png" width="500px" height="350px"alt="">#}
-{#                      </div>#}
-{#                  </li>#}
-{#                </ul>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <div class="tab-pane fade custom-tab-pane-product-details " id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">#}
-{#          <h5 class="p-3">مشخصات فنی</h5>#}
-{#          <ul class="nav flex-column">#}
-{#            <p class="my-3"><i class="bi bi-caret-left-fill"></i>مشخصات کلی</p>#}
-{#            <li class="nav-item d-flex mb-3">#}
-{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 mr-5">ولتاژ</p></div>#}
-{#              <div class="value d-flex align-items-center"><p class="m-0 ml-2">3.3 ولت</p></div>#}
-{#            </li>#}
-{#            <li class="nav-item d-flex mb-3">#}
-{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">فرکانس</p></div>#}
-{#              <div class="value d-flex align-items-center"><p class="m-0 ml-2">ISM Band 2.4Hhz#}
-{#              </p></div>#}
-{#            </li>#}
-{#            <li class="nav-item d-flex mb-3">#}
-{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">حساسیت</p></div>#}
-{#              <div class="value d-flex align-items-center"><p class="m-0 ml-2">84dBm</p></div>#}
-{#            </li>#}
-{#            <li class="nav-item d-flex mb-3">#}
-{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">حداکثر سرعت</p></div>#}
-{#              <div class="value d-flex align-items-center">#}
-{#                <p class="m-0 ml-2">2.1Mbps</p>#}
-{#              </div>#}
-{#            </li>#}
-{#            <li class="nav-item d-flex mb-3">#}
-{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">مدولاسیون</p></div>#}
-{#              <div class="value d-flex align-items-center"><p class="m-0 ml-2">GFSK</p></div>#}
-{#            </li>#}
-{#            <li class="nav-item d-flex mb-3">#}
-{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">مد</p></div>#}
-{#              <div class="value d-flex align-items-center"><p class="m-0 ml-2">master ,slave</p></div>#}
-{#            </li>#}
-{#            <li class="nav-item d-flex mb-3">#}
-{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">محدودیت دمای کاری#}
-{#              </p></div>#}
-{#              <div class="value d-flex align-items-center"><p class="m-0 ml-2">25- الی 75 درجه سانتی گراد</p></div>#}
-{#            </li>#}
-{#            <li class="nav-item d-flex mb-3">#}
-{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">پروتکل ارتباطی#}
-{#              </p></div>#}
-{#              <div class="value d-flex align-items-center"><p class="m-0 ml-2">USART</p></div>#}
-{#            </li>#}
-{#          </ul>#}
-{#        </div>#}
-{##}
-{#        <div class="tab-pane fade " id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">#}
-{#          <div class="container my-4 mx-2">#}
-{#            <div class="row">#}
-{#              <div class="col-sm-12 col-md-5">#}
-{#                <div class="progress-product-wrapper py-2">#}
-{#                  <div class="product-all-rate m-3">#}
-{#                    <p class="mb-2">ارزش خرید نسبت به قیمت</p>#}
-{#                    <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 3px">#}
-{#                      <div class="progress-bar" style="width: 80%"></div>#}
-{#                    </div>#}
-{#                  </div>#}
-{##}
-{#                  <div class="product-all-rate m-3">#}
-{#                    <p class="mb-2">کیفیت بالا</p>#}
-{#                    <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 3px">#}
-{#                      <div class="progress-bar" style="width: 30%"></div>#}
-{#                    </div>#}
-{#                  </div>#}
-{##}
-{#                  <div class="product-all-rate m-3">#}
-{#                    <p class="mb-2">کارایی مفید</p>#}
-{#                    <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 3px">#}
-{#                      <div class="progress-bar" style="width: 53%"></div>#}
-{#                    </div>#}
-{#                  </div>#}
-{#                </div>#}
-{#              </div>#}
-{##}
-{#              <div class="col-sm-12 col-md-7">#}
-{#                <div class="add-comment">#}
-{#                  <p class="mb-3">شما هم میتوانید در مورد این کالا دیدگاه خود را با ما در میان بگذارید</p>#}
-{#                  <p class="mb-3">با ثبت دیدگاه روی محصولات خریداری شده خود تخفیف بگیرید</p>#}
-{#                  <a href="#" class="btn btn-success">ثبت دیدگاه</a>#}
-{#                </div>#}
-{#              </div>#}
-{#            </div>#}
-{##}
-{#            <div class="row mt-5">#}
-{#              <div class="col-sm-12 col-md-4">#}
-{#                <div class="media custom-product-media">#}
-{#                  <div class="user-details">#}
-{#                    <img src="../img/user/telesk-user1.jpg" class="mr-3 rounded-circle" alt="..." width="64" height="64">#}
-{#                    <p class="my-3">نازنین شریفی <span class="user-role p-2">خریدار</span></p>#}
-{#                    <div>#}
-{#                      <div class="proposal rounded-pill mt-4 px-2 mb-3"><i class="bi bi-hand-thumbs-up"></i>#}
-{#                        <p class="ml-2">خرید این محصول را پیشنهاد میکنم#}
-{#                        </p>#}
-{#                      </div>#}
-{#                    </div>#}
-{#                    <!-- <div class="p_color mb-2">رنگ: خاکستری</div>#}
-{#                    <span class="p_supplien">فروشنده: فروشگاه آی تی </span> -->#}
-{#                  </div>#}
-{#                </div>#}
-{#              </div>#}
-{#              <div class="col-sm-12 col-md-8">#}
-{#                <div class="media-body user_p_comment">#}
-{#                  <!-- <p>خوب است</p> -->#}
-{#                  <ul class="nav flex-column">#}
-{#                    <span class="mt-2 text-primary bnefit_comm_title">نقاط قوت</span>#}
-{#                    <li class="nav-item">#}
-{#                      <i class="bi bi-dot"></i>#}
-{#                      قیمت مناسب#}
-{#                    </li>#}
-{#                    <li class="nav-item">#}
-{#                      <i class="bi bi-dot"></i>#}
-{#                      سرعت بالا#}
-{#                    </li>#}
-{#                    <li class="nav-item">#}
-{#                      <i class="bi bi-dot"></i>#}
-{#                      دوربین نسبتا خوب#}
-{#                    </li>#}
-{#                  </ul>#}
-{##}
-{#                  <ul class="nav flex-column nav_negative">#}
-{#                    <span class="mt-2 text-danger bnefit_comm_title">نقاط ضعف</span>#}
-{#                    <li class="nav-item">#}
-{#                      <i class="bi bi-dot"></i>#}
-{#                      ندارد#}
-{#                    </li>#}
-{#                  </ul>#}
-{#                  <div class="m-3 comm_vote">#}
-{#                    آیا این دیدگاه برای شما مفید بوده؟#}
-{#                    <span class="px-3 py-1"><i class="bi bi-hand-thumbs-up"></i></span>#}
-{#                    <span class="text-danger py-1"><i class="bi bi-hand-thumbs-down"></i></span>#}
-{#                  </div>#}
-{#                </div>#}
-{#              </div>#}
-{#            </div>#}
-{##}
-{#            <div class="row mt-5">#}
-{#              <div class="col-sm-12 col-md-4">#}
-{#                <div class="media custom-product-media">#}
-{#                  <div class="user-details">#}
-{#                    <img src="../img/user/telesk-user2.jpg" class="mr-3 rounded-circle" alt="..." width="64" height="64">#}
-{#                    <p class="my-3">امیر مقدمی<span class="user-role p-2">خریدار</span></p>#}
-{#                    <div>#}
-{#                      <div class="proposal rounded-pill mt-4 px-2 mb-3"><i class="bi bi-hand-thumbs-up"></i>#}
-{#                        <p class="ml-2">خرید این محصول را پیشنهاد میکنم#}
-{#                        </p>#}
-{#                      </div>#}
-{#                    </div>#}
-{#                    <!-- <div class="p_color mb-2">رنگ: خاکستری</div>#}
-{#                    <span class="p_supplien">فروشنده: فروشگاه آی تی </span> -->#}
-{#                  </div>#}
-{#                </div>#}
-{#              </div>#}
-{#              <div class="col-sm-12 col-md-8">#}
-{#                <div class="media-body user_p_comment">#}
-{#                  <!-- <p>خوب است</p> -->#}
-{#                  <ul class="nav flex-column">#}
-{#                    <span class="mt-2 text-primary bnefit_comm_title">نقاط قوت</span>#}
-{#                    <li class="nav-item">#}
-{#                      <i class="bi bi-dot"></i>#}
-{#                      قیمت مناسب#}
-{#                    </li>#}
-{#                    <li class="nav-item">#}
-{#                      <i class="bi bi-dot"></i>#}
-{#                      سرعت بالا#}
-{#                    </li>#}
-{#                    <li class="nav-item">#}
-{#                      <i class="bi bi-dot"></i>#}
-{#                      دوربین نسبتا خوب#}
-{#                    </li>#}
-{#                  </ul>#}
-{##}
-{#                  <ul class="nav flex-column nav_negative">#}
-{#                    <span class="mt-2 text-danger bnefit_comm_title">نقاط ضعف</span>#}
-{#                    <li class="nav-item">#}
-{#                      <i class="bi bi-dot"></i>#}
-{#                      ندارد#}
-{#                    </li>#}
-{#                  </ul>#}
-{#                  <div class="m-3 comm_vote">#}
-{#                    آیا این دیدگاه برای شما مفید بوده؟#}
-{#                    <span class="px-3 py-1"><i class="bi bi-hand-thumbs-up"></i></span>#}
-{#                    <span class="text-danger py-1"><i class="bi bi-hand-thumbs-down"></i></span>#}
-{#                  </div>#}
-{#                </div>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#          <hr>#}
-{#          <!-- register-user-comments -->#}
-{#          <div class="container add_comments">#}
-{#            <p class="p-2 rounded mb-0"><i class="bi bi-chat-left-text px-2"></i> دیدگاه خود را با ما به اشتراک بگذارید</p>#}
-{#            <div class="row">#}
-{#              <form class="row g-3">#}
-{#                <div class="col-md-6 col-sm-12">#}
-{##}
-{#                  <input type="email" class="form-control form-control-sm" placeholder="نام و نام خانوادگی ...">#}
-{#                </div>#}
-{#                <div class="col-md-6 col-sm-12">#}
-{##}
-{#                  <input type="password" class="form-control form-control-sm" placeholder="ایمیل معتبر ...">#}
-{#                </div>#}
-{#                <div class="col-md-12 col-sm-12">#}
-{#                  <textarea name="" class="form-control" id="" cols="30" rows="6" placeholder="دیدگاه شما ..."></textarea>#}
-{#                </div>#}
-{##}
-{##}
-{#                <div class="col-12 text-lg-start">#}
-{#                  <button type="submit" class="btn btn-primary my-3 btn-sm">ارسال دیدگاه</button>#}
-{#                </div>#}
-{#              </form>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{#        </div>#}
-{#        <!-- <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div> -->#}
-{#      </div>#}
-{#  </div>#}
-{#</div>#}
-
-
-
-{#///////////////#}
 <!-- product-details begin -->
 <div class="container bg-white mt-5" style="margin-bottom: 300px;">
   <div class="row">
@@ -384,11 +51,11 @@
       <div class="col-sm-12 col-md-7 pr-4 product-info">
         <h3 class="mt-4 d-flex justify-content-between product-page-title">
           <span>{{ product_detail.name }}</span>
-          <span>
-            <a href=""><i class="bi bi-heart mr-2 is-active"></i></a>
-            <a href=""><i class="bi bi-share-fill mr-2"></i></a>
-            <a href=""><i class="bi bi-bell-fill mr-2"></i></a>
-          </span>
+{#          <span>#}
+{#            <a href=""><i class="bi bi-heart mr-2 is-active"></i></a>#}
+{#            <a href=""><i class="bi bi-share-fill mr-2"></i></a>#}
+{#            <a href=""><i class="bi bi-bell-fill mr-2"></i></a>#}
+{#          </span>#}
         </h3>
 
         <div class="offer-price product-page-price mt-3">
@@ -467,43 +134,48 @@
           <h5 class="p-3">مشخصات فنی</h5>
           <ul class="nav flex-column">
             <p class="my-3"><i class="bi bi-caret-left-fill"></i>مشخصات کلی</p>
-            <li class="nav-item d-flex mb-3">
+            <li class="nav-item d-flex mb-3 ">
               <div class="key mr-3 d-flex align-items-center"><p class="m-0 mr-5"></p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2">{{product_detail.specification }}</p></div>
+              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p>{{product_detail.specification }}</div>
+                <br>
+                <br>
+                <br>
+                <br>
             </li>
-            <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2"></p></div>
-            <div class="value d-flex align-items-center"><p class="m-0 ml-2">
-              </p></div>
-            </li>
-            <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2"></p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p></div>
-            </li>
-            <li class="nav-item d-flex mb-3">
-             <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2"></p></div>
-              <div class="value d-flex align-items-center">
-               <p class="m-0 ml-2"></p>
-              </div>
-            </li>
-            <li class="nav-item d-flex mb-3">
-             <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2"></p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p></div>
-            </li>
-            <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2"></p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p></div>
-            </li>
-            <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">
-              </p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p></div>
-            </li>
-            <li class="nav-item d-flex mb-3">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">
-              </p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p></div>
-            </li>
+
+{#            <li class="nav-item d-flex mb-3">#}
+{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2"></p></div>#}
+{#            <div class="value d-flex align-items-center"><p class="m-0 ml-2">#}
+{#              </p></div>#}
+{#            </li>#}
+{#            <li class="nav-item d-flex mb-3">#}
+{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2"></p></div>#}
+{#              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p></div>#}
+{#            </li>#}
+{#            <li class="nav-item d-flex mb-3">#}
+{#             <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2"></p></div>#}
+{#              <div class="value d-flex align-items-center">#}
+{#               <p class="m-0 ml-2"></p>#}
+{#              </div>#}
+{#            </li>#}
+{#            <li class="nav-item d-flex mb-3">#}
+{#             <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2"></p></div>#}
+{#              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p></div>#}
+{#            </li>#}
+{#            <li class="nav-item d-flex mb-3">#}
+{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2"></p></div>#}
+{#              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p></div>#}
+{#            </li>#}
+{#            <li class="nav-item d-flex mb-3">#}
+{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">#}
+{#              </p></div>#}
+{#              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p></div>#}
+{#            </li>#}
+{#            <li class="nav-item d-flex mb-3">#}
+{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2">#}
+{#              </p></div>#}
+{#              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p></div>#}
+{#            </li>#}
           </ul>
         </div>
 

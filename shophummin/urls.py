@@ -14,6 +14,7 @@ urlpatterns = [
     path('aboutteam/', views.aboutteam, name='aboutteam'),
     path('to-bank/<int:order_id>/', views.to_bank, name='to_bank'),
     path('callback/', views.callback, name='callback'),
-    path('ordercompletion/', views.ordercompletion, name='ordercompletion'),
+    path('orderCompletion/', views.orderCompletion, name='ordercompletion'),
     path('abouttelesk/', views.abouttelesk, name='abouttelesk'),
+    path('cotactform/', views.contactform, name='contactform'),
  ]

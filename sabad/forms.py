@@ -1,6 +1,6 @@
 from django import forms
 
-PRODUCT_COUNT_CHOICES = [(i, str(i)) for i in range(1, 6)]
+PRODUCT_COUNT_CHOICES = [(i, str(i)) for i in range(1, 10)]
 
 
 class SabadAddProductForm(forms.Form):
