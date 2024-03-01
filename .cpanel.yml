@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPETH=/home/teleskor/project/
+    - /bin/cp * $DEPLOYPATH
