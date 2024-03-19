@@ -1,0 +1,78 @@
+ {% extends 'base.html' %}
+ {% load static %}
+
+ {% block title %} ثبت نام {% endblock %}
+
+{% block content %}
+      <!-- navbar-addres -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-sm-12 bg-white">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="navbar_address">
+          <ol class="breadcrumb custom-breadcrumb">
+            <li class="breadcrumb-item px-2"><a href="./index.html" class="px-0">خانه</a></li>
+
+            <li class="breadcrumb-item active px-0" id="icon_breadcrumb" aria-current="page">ثبت نام</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+{##}
+{#    <form method="POST">#}
+{#    {% csrf_token %}#}
+{#    {{ form }}#}
+{#    <button type="submit">send</button>#}
+{#    </form>#}
+  <!-- section begin -->
+  <section class="section-buy">
+    <div class="container container-buy mt-3 d-flex justify-content-center">
+      <div class="sefareshForm bg-body-tertiary mb-5 shadow" style="width: 40%;">
+        <div class="my-2 py-2 border-bottom h5">
+          <img src="./img/logo-telesk.png" style="width: 35px; height: 35px;" alt="">
+          <span class="my-5 py-2 ">فرم ثبت نام</span>
+        </div>
+          <form  method="POST" class="px-5">
+              {% csrf_token %}
+            <div class="mb-3 pt-3">
+              <label for="exampleInputFirstname" class="form-label">نام</label>
+              <input  name="first_name" type="text" class="form-control" id="exampleInputFirstname">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputLastname" class="form-label">نام خانوادگی</label>
+              <input name="last_name" type="text" class="form-control" id="exampleInputLastname">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmailorPhone" class="form-label">ایمیل</label>
+              <input name="email" type="email" class="form-control" id="exampleInputEmailorPhone">
+            </div>
+{#            <div class="mb-3">#}
+{#              <label for="exampleInputPostalCode" class="form-label">شماره تماس</label>#}
+{#              <input type="text" class="form-control" id="exampleInputPostalCode">#}
+{#            </div>#}
+            <div class="mb-3">
+              <label for="exampleInputAddress" class="form-label">رمز عبور</label>
+              <input name="password1" type="password" class="form-control" id="exampleInputAddress">
+            </div>
+{#              {% if form.errors %}#}
+{#                {{ form.errors }}#}
+{#              {% endif %}#}
+          <!-- button begin -->
+          <div class="container px-5">
+            <div class="row">
+              <div class="inputBoxBuy col-sm-6  my-3">
+                <button  class="btn-submit bg-primary-subtle btn-buy border-0 rounded text-dark py-2" type="submit"   style="height: 40px; width: 100%;text-align: center;">ثبت نام</button>
+              </div>
+
+              <div class="inputBoxgostore col-sm-6 my-3 sm-auto">
+                <a href="./loginPage.html" class=" btn-submit btn-send border-0 rounded bg-dark-subtle  text-dark pt-2" type="submit" name="" style=" height: 40px;width: 100%;text-align: center; "> ورود</a>
+              </div>
+            </div>
+          </div>
+          </form>
+      </div>
+    </div>
+  </section>
+  <!-- section end -->
+{% endblock %}

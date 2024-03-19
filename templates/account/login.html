@@ -1,0 +1,66 @@
+ {% extends 'base.html' %}
+ {% load static %}
+
+ {% block title %} ورود {% endblock %}
+
+{% block content %}
+ <!-- navbar-addres -->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-sm-12 bg-white">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="navbar_address">
+          <ol class="breadcrumb custom-breadcrumb">
+            <li class="breadcrumb-item px-2"><a href="./index.html" class="px-0">خانه</a></li>
+            <li class="breadcrumb-item px-2"><a href="./registerPage.html" class="px-0">ثبت نام</a></li>
+            <li class="breadcrumb-item active px-0" id="icon_breadcrumb" aria-current="page">ورود</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- section begin -->
+  <section class="section-buy">
+    <div class="container container-buy mt-3 d-flex justify-content-center">
+      <div class="sefareshForm bg-body-tertiary mb-5 shadow" style="width: 40%;">
+        <div class="my-2 py-2 border-bottom h5">
+          <img src="./img/logo-telesk.png" style="width: 35px; height: 35px;" alt="">
+          <span class="my-5 py-2 ">فرم ورود</span>
+        </div>
+          <form  method="POST" class="px-5">
+              {% csrf_token %}
+            <!-- <div class="mb-3 pt-3">
+              <label for="exampleInputFirstname" class="form-label">نام</label>
+              <input type="text" class="form-control" id="exampleInputFirstname">
+            </div> -->
+
+            <div class="mb-3">
+              <label for="exampleInputEmailorPhone" class="form-label">ایمیل</label>
+              <input name="login" type="email" class="form-control" id="exampleInputEmailorPhone">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputAddress" class="form-label">رمز عبور</label>
+              <input  name="password" type="password" class="form-control" id="exampleInputAddress">
+            </div>
+                  <label for="id_remember">Remember Me:</label>
+                <input type="checkbox" name="remember" id="id_remember">
+
+          <!-- button begin -->
+          <div class="container px-5">
+            <div class="row">
+              <div class="inputBoxBuy col-sm-6  my-3">
+                <a href="./registerPage.html" class="btn-submit bg-primary-subtle btn-buy border-0 rounded text-dark py-2" type="submit" name=""  style="height: 40px; width: 100%;text-align: center;">بازگشت به ثبت نام</a>
+              </div>
+
+              <div class="inputBoxgostore col-sm-6 my-3 sm-auto">
+                <button  class=" btn-submit btn-send border-0 rounded bg-dark-subtle  text-dark pt-2" type="submit" name="" style=" height: 40px;width: 100%;text-align: center; "> ورود</button>
+              </div>
+            </div>
+          </div>
+          </form>
+      </div>
+    </div>
+  </section>
+  <!-- section end -->
+{% endblock %}

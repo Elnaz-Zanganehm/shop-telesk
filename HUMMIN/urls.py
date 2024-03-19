@@ -22,9 +22,11 @@ from django.conf import settings
 
 
 urlpatterns = [
-    path('', include('shophummin.urls')),
+
     path('sabad/', include('sabad.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
+    path('', include('shophummin.urls')),
 
 
 
