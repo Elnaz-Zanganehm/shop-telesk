@@ -5,7 +5,7 @@
 
 
  {% block static_files %}
-    
+    <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'style/login-form-modal.css' %}">
     <link rel="stylesheet" href="{% static 'style/_store.css' %}">
     <link rel="stylesheet" href="{% static 'style/product-breadcrumb.css' %}">
@@ -73,9 +73,26 @@
               </div>
             </div>
 
+{#            <div class="row">#}
+{#                <div class="shop-content">#}
+{#                    <div class="col-lg-4 col-md-6 col-sm-6">#}
+{#                        {% for product in product_list %}#}
+{#                 <div class="product-box mt-4">#}
+{#                    <img src="{{product.image_url}}" alt="" class="product-img" style="width: 263px">#}
+{#                    <form action="{% url 'sabad:sabad_add' product.id %}" method="POST">#}
+{#                        {% csrf_token %}#}
+{#                    {{ sabad_add_product_form }}#}
+{#                    <button class="add-to-basket" type="submit">+ افزودن به سبد خرید</button>#}
+{#                    </form>#}
+{#                    <h2 class="product-title mb-2"><a style="color: #111111" href="{{ product.get_absolute_url }}">{{ product.name }}</a></h2>#}
+{#                    <span class="price">{{ product.price }}</span>#}
+{#                </div>#}
+{#                      {% endfor %}#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
 
-
-                      <div class="shop-content ">
+              <div class="shop-content ">
                   {% for product in product_list %}
                  <div class="product-box mt-4">
                     <img src="{{product.image_url}}" alt="" class="product-img w-75 h-50">

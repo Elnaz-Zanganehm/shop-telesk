@@ -130,19 +130,19 @@
           </div>
         </div>
 
-        <div class="tab-pane fade custom-tab-pane-product-details " id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-          <h5 class="p-3">مشخصات فنی</h5>
-          <ul class="nav flex-column">
-            <p class="my-3"><i class="bi bi-caret-left-fill"></i>مشخصات کلی</p>
-            <li class="nav-item d-flex mb-3 ">
-              <div class="key mr-3 d-flex align-items-center"><p class="m-0 mr-5"></p></div>
-              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p>{{product_detail.specification }}</div>
-                <br>
-                <br>
-                <br>
-                <br>
-            </li>
-
+{#        <div class="tab-pane fade custom-tab-pane-product-details " id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">#}
+{#          <h5 class="p-3">مشخصات فنی</h5>#}
+{#          <ul class="nav flex-column">#}
+{#            <p class="my-3"><i class="bi bi-caret-left-fill"></i>مشخصات کلی</p>#}
+{#            <li class="nav-item d-flex mb-3 ">#}
+{#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 mr-5"></p></div>#}
+{#              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p>{{product_detail.specification }}</div>#}
+{#                <br>#}
+{#                <br>#}
+{#                <br>#}
+{#                <br>#}
+{#            </li>#}
+{##}
 {#            <li class="nav-item d-flex mb-3">#}
 {#              <div class="key mr-3 d-flex align-items-center"><p class="m-0 ml-2"></p></div>#}
 {#            <div class="value d-flex align-items-center"><p class="m-0 ml-2">#}
@@ -176,8 +176,19 @@
 {#              </p></div>#}
 {#              <div class="value d-flex align-items-center"><p class="m-0 ml-2"></p></div>#}
 {#            </li>#}
-          </ul>
+{#          </ul>#}
+{#        </div>#}
+
+           <div class="container">
+          <div class="row">
+          <h5 class="my-3">مشخصات فنی</h5>
+          <h6 class="my-3"><i class="bi bi-caret-left-fill px-2" style="vertical-align: -3px;"></i>مشخصات کلی</h6>
+            <div class="col-sm-6">
+              <p class="border-top pt-2" >{{product_detail.specification }}</p>
+            </div>
+          </div>
         </div>
+
 
         <div class="tab-pane fade " id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
           <div class="container my-4 mx-2">

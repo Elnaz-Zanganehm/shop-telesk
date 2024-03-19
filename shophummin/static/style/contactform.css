@@ -7,7 +7,7 @@
     align-items: center !important;
     flex-direction: column;
     /*background: url({% static 'img/telesk-contact05.jpg' %});*/
-    /*background: url("./img/telesk-contact05.jpg") !important;*/
+    background: url("/static/img/telesk-contact05.jpg");
     background-size: cover;
 }
 
